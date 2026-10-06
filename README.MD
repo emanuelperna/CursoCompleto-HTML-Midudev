@@ -1,1 +1,1 @@
-# Inicialización del curso HTML Midudev
+# Curso de inicialización en HTML de Midudev

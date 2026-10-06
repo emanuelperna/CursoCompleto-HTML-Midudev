@@ -1,11 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<!doctype html>
+<html lang="es">
+  <!--Elemento para metadatos-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio de Michael</title>
+
+    <meta name="description"content="Portfolio de Michael Scott, Ingeniero de Software con +15 años de experiencia. 
+      Creador y divulgador de programación."
+    />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Portfolio de Michael" />
+    <meta property="og:description" content="Portfolio de Michael Scott, Ingeniero de Software con +15 años de experiencia. Creador y divulgador de programación." />
+    <meta property="og:image" content="./images/michael.jpg" />
+    <meta property="og:image:alt" content="Una fotografia de Michael Scott saludando" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#09f" />
+
+    <link rel="icon" type="image/jpg" href="./images/michael.jpg" />
+
+    <style>
+        body {
+            background-color: #29bef5;
+        }
+    </style>
+  </head>
+
+<!--Elemento para el contenido de la pagina-->
+  <body>
+    <header>
+      <h1>Portfolio de Michael Scott</h1>
+
+      <nav>
+        <!--Enlaces de navegacion internos-->
+
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a> 
+        
+        <!--Enlaces de navegacion externos-->
+        <a href="https://dunder-mifflin.netlify.app/" 
+        target="_blank" 
+        rel="noopener noreferrer">Enterprise Page</a>
+
+      </nav>
+    </header>
+
+    <main>
+      <p>
+        +15 años de experiencia como <strong>Ingeniero de Software</strong>.
+        Creador y divulgador de programación
+      </p>
     
-</body>
+
+    <h2 id="experiencia">Experiencia</h2>
+
+    <ul>
+      <li class="list-item">Adevintia - 2022</li>
+      <li class="list-item">Hubii - 2020</li>
+      <li class="list-item">Nacencia - 2015</li>
+    </ul>
+
+    <a download href="./images/michael.jpg">
+        <img
+            id="foto-michael"
+            width="300"
+            height="500"
+            title="Foto de Michael"
+            alt="Una fotografia de Michael Scott saludando"
+            src="./images/michael.jpg"
+        />
+    </a>
+    
+    <h2 id="proyectos">Proyectos realizados</h2>
+
+    <aside> <!--Aside Contenido que se relaciona indirectamente con el contenido principal del documento -->
+        <header>
+            <h3>Mis tecnologías favoritas</h3>
+        </header>
+        <ol type="1" reversed start="4"> <!--Lista ordenada con numeros, reversa y empieza en 4-->
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Node.js</li>
+        </ol>
+    </aside>
+
+    <button>
+        Haz Click Aqui
+    </button>
+    
+    <section> <!--Abarca secciones independientes genericas de un documento -->
+        <article>
+          <header>
+            <h4>Sitio web corporativo</h4>
+          </header>
+        </p>
+             Desarrolo de un sitio web corporativo con una interfaz amigable y moderna.
+        </p>
+          <footer>
+            <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+          </footer>
+        </article>
+
+    <section>
+        <article> <!--Bloque independiente de informacion -->
+            <header>
+                <h4>Aplicacion de Web de E-commerce</h4>
+            </header>
+            <p>
+                Creacion de una plataforma de comercio electronico para una tienda local.
+            </p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Preguntas Frecuentes</h2>
+        
+        <details open> <!--Elemento que permite mostrar y ocultar informacion -->
+            <summary>¿Que estudios tienes?</summary>
+            <p>Estudié en la universidad de Cambridge una ingeniería en informática durante 5 años.</p>
+        </details>
+    
+        <details open>
+            <summary>¿Cuales son tus hobbies?</summary>
+            <p>Me gusta mucho el deporte, sobre todo el futbol y el baloncesto.</p>
+        </details open>
+
+        <details>
+            <summary>¿Cuál es tu lenguaje de programación favorito?</summary>
+            <p>Me encanta JavaScript, es un lenguaje muy versátil y con el que se pueden hacer muchas cosas.</p>
+        </details>
+
+    </section>
+    
+    <section>
+        <h2>Formulario de Contacto</h2>
+        <form method="post" action="/">
+            <fieldset>
+                <legend>Informacion Personal</legend>
+                <div>    
+                    <label>Nombre:
+                    <input 
+                        type="text" 
+                        name="nombre"
+                        placeholder="Michael Scott"
+                        required
+                    >
+                </div>
+
+                </label>
+                    <label>Email:
+                    <input 
+                        type="email" 
+                        name="email"
+                        placeholder="michael.scott@dundermifflin.com" 
+                        required
+                    >
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Informacion adicional</legend>
+                <div>    
+                    <label>Telefono:
+                    <input 
+                        type="tel" 
+                        name="phone"
+                        placeholder="123-456-7890"
+                        required
+                    >
+                    </label>
+                </div>
+                <div>
+                    <datalist id="languages">
+                        <option value="JavaScript"></option>
+                        <option value="Python"></option>
+                        <option value="Java"></option>
+                        <option value="C++"></option>
+                    </datalist>
+                    <label>
+                        ¿Con que lenguaje quieres que te ayude?:
+                        <input list="languages" name="languages">
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Otros</legend>
+                <div>
+                    <label for="why">¿Por que quieres contactarme?</label>
+                    <select name="why" id="why">
+                        <option value="1">Trabajo</option>
+                        <option value="2">Duda</option>
+                        <option value="3">Mas Informacion</option>
+                    </select>
+                <div>
+                    <label for="terms">¿Aceptas los terminos y condiciones?</label>
+                    <input type="checkbox" name="terms" id="terms" required>
+                </div>
+                </div>
+                <input type="submit" value="Enviar Contacto">
+            </fieldset>
+        </form>
+    </section>
+
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Michael Scott. Todos los derechos reservados.</p>
+
+      <a href="mailto:michael.scott@dundermifflin.com">Enviame un correo</a>
+      <a href="tel:+1234567890">Llamar por teléfono</a>
+    </footer>
+
+  </body>
 </html>
+
+<!--Aqui tu comentario-->
